@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineer Cafe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://fontawesome.com/icons/bowl-food?f=classic&s=solid">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</head>
+<body>
+
+    <!-- header -->
+    <header class="header">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <a href="#" class="logo">Engineer Cafe<i class="fa-solid fa-bowl-food"></i></a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#footer">Contact</a>
+            <a href="#book">Book</a>      
+        </nav>
+        <a href="#" class="btn" onclick="document.getElementById('login').style.display='block'">Log in</a>
+        
+        <!-- Pop up Login form -->
+        <div id="login" class="modal">
+            <form class="modal-content animate" method="post" style="width: 500px;">
+                <div class="head">
+                    <h2>Engineer Cafe</h2>
+                    <span type="button"  onclick="document.getElementById('login').style.display='none'" class="btn-close" >&times;</span>
+                </div>
+                <div class="form-content">
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <button class="popbtn" type="submit" style="width: 100%;">Login</button>
+                    <button class="popbtn" onclick="document.getElementById('signup').style.display='block'" style="width: 100%; ">Signup</button>
+                    <label>
+                    <input type="checkbox" checked="checked" name="remember">Remember Me
+                    </label>
+                    </div> 
+                </div>
+            </form>
+        </div>
+
+        <!-- Pop up Signup Form  -->
+        <div id="signup" class="modal">
+            <form class="modal-content animate" method="post" style="width: 500px;">
+                <div class="head">
+                    <h2>Engineer Cafe</h2>
+                    <span type="button"  onclick="document.getElementById('signup').style.display='none'" class="btn-close" >&times;</span>
+                </div>
+                <div class="form-content">
+                    <input type="text" placeholder="User Name" name="uname" required>
+                    <input type="tel" placeholder="Mobile Number" name="mno" required>
+                    <input type="email" placeholder="E-mail" name="email" required>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <input type="password" placeholder="Re-Enter Password" name="psw" required>
+                    <button class="popbtn" type="submit">Sign Up</button> 
+                </div>
+            </form>
+        </div>
+    </header>
+    <section  class="home" id="home">
+        <div class="row">
+            <div class="content">
+                    <h3>Are you hungry ?</h3>
+                    <h3>Don't wait !</h3>
+                    <h3>let start to order food now</h3>
+                <a href="#menu" class="btn">check our menu</a>
+            </div>
+        </div>
+    </section>
+    <!-- MENU -->
+    <section class="menu" id="menu">
+        <h1 class="heading">our menu <span>popular menu</span></h1>
+        <div class="menulist">
+            <button type="button" class="btn-cat active_btn" onclick="changeContent('all')">All Dishes</button>
+            <button type="button" class="btn-cat" onclick="changeContent('lunch')">Lunch</button>
+            <button type="button" class="btn-cat" onclick="changeContent('dinner')">Dinner</button>
+            <button type="button" class="btn-cat" onclick="changeContent('starter')">Starter</button>
+        </div>
+        
+        <div class="container" id="all">
+            <div class="menu_items_container">
+                <div class="food_images">
+                    <img src="images/StarterImages/1.jpg" alt="">
+                    <p class="price">Rs.150</p>
+                    <p>Chicken-65</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/StarterImages/2.jpg" alt="">
+                    <p class="price">Rs.80</p>
+                    <p>Coffee</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/StarterImages/3.jpg" alt="">
+                    <p class="price">Rs.180</p>
+                    <p>pasta</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/StarterImages/4.jpg" alt="">
+                    <p class="price">Rs.155</p>
+                    <p>pumpkin soup</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/StarterImages/5.jpg" alt="">
+                    <p class="price">Rs.125</p>
+                    <p>Curry Soup</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/StarterImages/6.jpg" alt="">
+                    <p class="price">Rs.150</p>
+                    <p>Vegetable skewer</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/1.jpg" alt="">
+                    <p class="price">Rs.40</p>
+                    <p>Plain</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/2.jpg" alt="">
+                    <p class="price">Rs.65</p>
+                    <p>Paper Rost</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/9.jpg" alt="">
+                    <p class="price">Rs.265</p>
+                    <p>Chicken Biriyani</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/3.jpg" alt="">
+                    <p class="price">Rs.80</p>
+                    <p>Onion Roast</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/4.jpg" alt="">
+                    <p class="price">Rs.55</p>
+                    <p>Egg Parotta</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/5.jpg" alt="">
+                    <p class="price">Rs.25</p>
+                    <p>Plain Omelette</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/6.jpg" alt="">
+                    <p class="price">Rs.150</p>
+                    <p>Kadai Fry</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/7.jpg" alt="">
+                    <p class="price">Rs.65</p>
+                    <p>Egg Veechu</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/8.jpg" alt="">
+                    <p class="price">Rs.65</p>
+                    <p>Egg Roast</p>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="dinner">
+            <div class="menu_items_container">
+                <div class="food_images">
+                    <img src="images/1.jpg" alt="">
+                    <p class="price">Rs.40</p>
+                    <p>plain</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/2.jpg" alt="">
+                    <p class="price">Rs.65</p>
+                    <p>Paper Rost</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/3.jpg" alt="">
+                    <p class="price">Rs.80</p>
+                    <p>Onion Roast</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/4.jpg" alt="">
+                    <p class="price">Rs.55</p>
+                    <p>Egg Parotta</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/5.jpg" alt="">
+                    <p class="price">Rs.25</p>
+                    <p>Plain Omelette</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/6.jpg" alt="">
+                    <p class="price">Rs.150</p>
+                    <p>Kadai Fry</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/7.jpg" alt="">
+                    <p class="price">Rs.65</p>
+                    <p>Egg Veechu</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/8.jpg" alt="">
+                    <p class="price">Rs.65</p>
+                    <p>Egg Roast</p>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="lunch">
+            <div class="menu_items_container">
+                <div class="food_images">
+                    <img src="images/9.jpg" alt="">
+                    <p class="price">Rs.265</p>
+                    <p>Chicken Biriyani</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/1.jpg" alt="">
+                    <p class="price">Rs.40</p>
+                    <p>plain</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/2.jpg" alt="">
+                    <p class="price">Rs.65</p>
+                    <p>Paper Rost</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/3.jpg" alt="">
+                    <p class="price">Rs.80</p>
+                    <p>Onion Roast</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/4.jpg" alt="">
+                    <p class="price">Rs.55</p>
+                    <p>Egg Parotta</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/5.jpg" alt="">
+                    <p class="price">Rs.25</p>
+                    <p>Plain Omelette</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/6.jpg" alt="">
+                    <p class="price">Rs.150</p>
+                    <p>Kadai Fry</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/7.jpg" alt="">
+                    <p class="price">Rs.65</p>
+                    <p>Egg Veechu</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/8.jpg" alt="">
+                    <p class="price">Rs.65</p>
+                    <p>Egg Roast</p>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="starter">
+            <div class="menu_items_container">
+                <div class="food_images">
+                    <img src="images/StarterImages/1.jpg" alt="">
+                    <p class="price">Rs.150</p>
+                    <p>Chicken-65</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/StarterImages/2.jpg" alt="">
+                    <p class="price">Rs.80</p>
+                    <p>Coffee</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/StarterImages/3.jpg" alt="">
+                    <p class="price">Rs.180</p>
+                    <p>pasta</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/StarterImages/4.jpg" alt="">
+                    <p class="price">Rs.155</p>
+                    <p>pumpkin soup</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/StarterImages/5.jpg" alt="">
+                    <p class="price">Rs.125</p>
+                    <p>Curry Soup</p>
+                </div>
+                <div class="food_images">
+                    <img src="images/StarterImages/6.jpg" alt="">
+                    <p class="price">Rs.150</p>
+                    <p>Vegetable skewer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <h1 class="heading">about us <span>why choose us</span></h1>
+
+        <div class="row">
+            <div class="image">
+                <img src="images/about-img.webp" alt="">
+            </div>
+
+            <div class="content">
+                <h3 class="title">what's make our Dish special!</h3>
+                <p style="text-align: justify;">Welcome to Enginner Cafe, where culinary excellence meets warm hospitality. Established in 2023, we take pride in offering a delightful dining experience that goes beyond the plate. Engineer Cafe is the brainchild of Vignesh, a passionate culinary enthusiast with a vision to create a haven for food lovers. What started as a dream has now blossomed into a culinary journey that celebrates flavors, innovation, and the joy of sharing good food.</p>
+                <a href="#" class="btn">read more</a>
+                <div class="icons-container">
+                    <div class="icons">
+                        <img src="images/about-icon-2.png" alt="">
+                        <h3>our branches</h3>
+                    </div>
+                    <div class="icons">
+                        <img src="images/about-icon-3.png" alt="">
+                        <h3>free delivery</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- BOOK -->
+     <section class="book" id="book">
+        <h1 class="heading">booking <span>reserve a table</span></h1>
+
+        <form action="">
+            <input type="text" placeholder="Name" class="box">
+            <input type="email" placeholder="Email" class="box">
+            <input type="tel" placeholder="Phone Number" class="box">
+            
+            <select name="" id="" class="box">
+                <option value="">Location</option>
+                <option value="">Karapakkam</option>
+                <option value="">Velacherry</option>
+                <option value="">Thoraipakkam</option>
+                <option value="">Tambaram</option>
+                <option value="">Siruseri</option>
+
+
+            </select>
+            <input type="date" placeholder="date" class="box">
+            <input type="number" name="" id="" class="box" placeholder="No of Persons">
+            <select name="" id="" class="box">
+                <option value="">Seasion</option>
+                <option value="">Lunch</option>
+                <option value="">Dinner</option>
+            </select>
+            
+            <input type="submit" value="check Availability" class="btn">
+            <input type="submit" value="Book Table" class="btn">
+            
+        </form>
+    </section>
+
+    <section class="footer" id="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>our branches</h3>
+                <a href="#"><i class="fas fa-arrow-right"></i> Karapakkam</a>
+                <a href="#"><i class="fas fa-arrow-right"></i> Velacherry</a>
+                <a href="#"><i class="fas fa-arrow-right"></i> Thoraipakkam</a>
+                <a href="#"><i class="fas fa-arrow-right"></i> Tambaram</a>
+                <a href="#"><i class="fas fa-arrow-right"></i> Siruseri</a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home"><i class="fas fa-arrow-right"></i> home</a>
+                <a href="#about"><i class="fas fa-arrow-right"></i> menu</a>
+                <a href="#menu"><i class="fas fa-arrow-right"></i> about</a>
+                <a href="#footer"><i class="fas fa-arrow-right"></i> contact</a>
+                <a href="#book"><i class="fas fa-arrow-right"></i> book</a>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#"><i class="fas fa-phone"></i> +91-8777722222</a>
+                <a href="#"><i class="fas fa-phone"></i> +91-8888822222</a>
+                <a href="#"><i class="fas fa-envelope"></i>EnginnerCafe@gmail.com</a>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i> facebook</a>
+                <a href="#"><i class="fab fa-twitter"></i> twitter</a>
+                <a href="#"><i class="fab fa-instagram"></i> instagram</a>
+                <a href="#"><i class="fab fa-linkedin"></i> linkedin</a>
+            </div>
+        </div>
+
+        <div class="credit">Engineer Cafe| all rights reserved @2024 </div>
+    </section>
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+    <script src="JS/script.js"></script>
+</body>
+</html>

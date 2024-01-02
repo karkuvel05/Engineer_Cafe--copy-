@@ -1,0 +1,605 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+section {
+    padding: 2rem 9%;
+}
+
+/* Header */
+
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0.5rem 1rem rgb(0,0,0,.1);
+    padding: 2rem 9%;
+    animation: effects 2s linear;
+   
+}
+
+@keyframes effects {
+    0% {
+      transform: translateY(-100%);
+  }
+}
+.header .logo{
+    color: orangered;
+    font-size: 2.3rem;
+    font-weight:1000;
+}
+.header .logo i{
+    padding-left: .1rem;
+
+}
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.7rem;
+    color: orangered;
+}
+.header .navbar a:hover{
+    font-size: 2rem;
+}
+.header .btn{
+    margin-top: 0;
+}
+
+
+#menu-btn{
+    font-size: 3rem;
+    color: orangered;
+    cursor: pointer;
+    display: none;
+}
+.btn{
+  
+    display: inline-block;
+    padding: .9rem 1.5rem;
+    border: .2rem solid orangered;
+    border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+    color: orangered;
+    background: none;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+}
+.btn:hover{
+    border: .2rem dashed orangered;
+    border-radius: 4% 95% 6% 95% / 95% 4% 92% 5%;
+}
+
+
+.home{
+    min-height: 100vh;
+    padding-top: 12rem;
+    background: url('../images/Home.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.home .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.home .row .content{
+    flex: 1 1 42rem;
+}
+
+.home .row .content h3{
+    font-size: 4rem;
+    color: orangered;
+    text-transform: uppercase;
+}
+
+/* Book A Table */
+.book {
+    background: url(../images/book-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.book form
+{
+    margin: 0 auto 2rem auto;
+    max-width: 60rem;
+    border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+    padding: 3rem;
+    border: .2rem solid orangered;
+}
+.book  form .box{
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    background: none;
+    text-transform: none;
+    color: orangered;
+    margin: .7rem 0;
+    border: .2rem solid orangered;
+}
+.book form .box:focus{
+    border: .2rem dashed orangered;
+    /* border-radius: 4% 95% 6% 95% / 95% 4% 92% 5%; */
+
+}
+.book form select{
+    width: 100%;
+    padding: 1.2rem;
+}
+.heading {
+    font-size: 9rem;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: .05rem orangered;
+    letter-spacing: .2rem;
+    text-align: center;
+    pointer-events: none;
+    position: relative;
+}
+
+.heading span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color:orangered;
+    font-size: 3rem;
+}
+
+/* Footer  */
+.footer .box-container
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem,1fr));
+    gap:1.5rem;
+}
+.footer .box-container .box h3
+{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    color: orangered;
+}
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    color: orangered;
+}
+
+.footer .box-container .box a i{
+    padding-right: .5rem;
+}
+
+.footer .box-container .box  a:hover i{
+    padding-right: 2rem;
+}
+
+.footer .credit
+{
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    color: orangered;
+}
+
+/* ABOUT */
+
+.about .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.about .row .image {
+    flex: 1 1 42rem;
+}
+
+.about .row .image img {
+    width: 100%;
+    animation: aboutImage 4s linear infinite;
+}
+
+@keyframes aboutImage {
+
+    0%,
+    100% {
+        transform: scale(.9);
+        border-radius: 4% 95% 6% 95% / 95% 4% 92% 5%
+    }
+
+    50% {
+        transform: scale(.8);
+        border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+    }
+}
+
+.about .row .content{
+    flex:1 1 42rem;
+}
+.about .row .content .title{
+    color: orangered;
+    font-size: 3rem;
+    line-height: 1.8;
+}
+.about .row .content p{
+    color: orangered;
+    font-size: 1.5rem;
+    gap:1rem;
+    padding-top:3rem;
+}
+
+.about .row .content .icons-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 3rem;
+}
+.about .row .content .icons-container .icons
+{
+    flex: 1 1 15rem;
+    padding: 1.5rem;
+    text-align: center;
+    border: .2rem solid  orangered;
+    border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+
+}
+
+.about .row .content .icons-container .icons img
+{
+    height: 5rem;
+    width: 5rem;
+}
+.about .row .content .icons-container .icons h3
+{
+    font-size: 1.7rem;
+    padding-top: 1rem;
+    color: orangered;
+}
+/* MENU */
+
+#menu
+{
+    padding: 10rem 0;
+}
+
+.food_lover_container
+{
+    margin: 1rem 0;
+}
+
+.menulist
+{
+    margin: 4rem 0;
+    width: 100%;
+    display: inline-block;
+    color: #000;
+    text-align: center;
+}
+
+.btn-cat
+{
+    padding: .7rem 1.2rem;
+    cursor: pointer;
+    margin: 0 2rem;
+    border: 1px solid #ddd;
+    font-size: 2rem;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+.btn-cat:hover,.active_btn
+{
+    background-color: orangered;
+    color: white;
+}
+.container{
+    max-width: 1200px;
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+    
+}
+.box{
+    max-width: 1200px;
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+    
+}
+#dinner
+{
+    max-width: 1200px;
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+    display: none;
+    
+}
+#lunch
+{
+    display: none;
+}
+#starter
+{
+    display: none;
+}
+
+.menu_items_container
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 3rem;
+}
+.menu_items_container .food_images
+{
+    border: 1px solid white;
+    box-shadow: 10px 10px 5px rgba(0,0,0,.3);
+}
+
+
+.food_images img
+{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.food_images p
+{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5em;
+    font-weight: 500;
+}
+
+.food_images .price
+{
+    color: orangered;
+    font-size: 1.8rem;
+    font-weight: 500;
+
+}
+.food_images img:hover
+{
+    transform: scale(1.1);
+} 
+
+
+/* Pop up Login Form  */
+
+.modal
+{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content
+{
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+form 
+{
+    position: relative;
+}
+form span
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+   
+}
+.head{
+    position: relative;
+}
+.head span
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    margin-top: 0;
+    cursor: pointer;
+    font-size: 25px;
+    
+}
+.head h2{
+    padding: 10px;
+    color: orangered;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 800;
+    
+}
+input[type=text], input[type=password],input[type=tel] ,input[type=email]  
+{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.popbtn 
+{
+    background-color:orangered;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.popbtn:hover 
+{
+    opacity: 0.7;
+}
+
+.form-content
+{
+    padding: 16px;
+}
+.animate 
+{
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom 
+{
+    from {-webkit-transform: scale(0);}
+    to {-webkit-transform: scale(1);}
+}
+@keyframes animatezoom 
+{
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+
+
+
+
+
+
+
+
+
+
+
+  /* MEDIA QUERIES */
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 3rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 6rem;
+    }
+
+    .heading span {
+        font-size: 2.3rem;
+    }
+
+    #menu-btn {
+        display: initial;
+    }
+
+    #menu-btn.fa-times {
+        transform: rotate(180deg);
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .navbar a {
+        display: block;
+        font-size: 2.2rem;
+        margin: 0;
+        padding: 1.5rem 2rem;
+    }
+
+    .home {
+        text-align: center;
+    }
+
+    .home .row .content h3 {
+        font-size: 4rem;
+    }
+
+    .menu .box-container .box {
+        margin-left: 0;
+        margin-top: 6rem;
+        flex-flow: column;
+        text-align: center;
+    }
+
+    .menu .box-container .box img {
+        margin-left: 0;
+        margin-top: -6rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .home .row .image img {
+        height: auto;
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+   
+    .menu_items_container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 520px) {
+   
+    .menu_items_container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
